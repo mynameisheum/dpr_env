@@ -1,0 +1,297 @@
+# @package _group_
+
+dpr_wiki:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: data.wikipedia_split.psgs_w100
+  id_prefix: 'wiki:'
+# 8 split #########################################################
+dpr_wiki_split_0:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_0.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_1:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_1.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_2:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_2.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_3:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_3.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_4:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_4.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_5:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_5.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_6:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_6.tsv
+  id_prefix: 'wiki:'
+
+dpr_wiki_split_7:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_7.tsv
+  id_prefix: 'wiki:'
+
+# 50 split #########################################################
+#dpr_wiki_split_0:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_0.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_1:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_1.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_2:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_2.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_3:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_3.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_4:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_4.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_5:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_5.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_6:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_6.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_7:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_7.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_8:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_8.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_9:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_9.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_10:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_10.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_11:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_11.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_12:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_12.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_13:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_13.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_14:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_14.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_15:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_15.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_16:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_16.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_17:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_17.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_18:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_18.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_19:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_19.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_20:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_20.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_21:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_21.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_22:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_22.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_23:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_23.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_24:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_24.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_25:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_25.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_26:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_26.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_27:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_27.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_28:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_28.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_29:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_29.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_30:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_30.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_31:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_31.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_32:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_32.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_33:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_33.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_34:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_34.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_35:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_35.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_36:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_36.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_37:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_37.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_38:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_38.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_39:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_39.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_40:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_40.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_41:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_41.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_42:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_42.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_43:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_43.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_44:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_44.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_45:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_45.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_46:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_46.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_47:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_47.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_48:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_48.tsv
+#  id_prefix: 'wiki:'
+#
+#dpr_wiki_split_49:
+#  _target_: dpr.data.retriever_data.CsvCtxSrc
+#  file: /home/tjdgma/DPR/dpr/data/download_data/data/retriever/wikipedia_split/psgs_w100_split_v2_49.tsv
+#  id_prefix: 'wiki:'

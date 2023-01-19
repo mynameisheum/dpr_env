@@ -1,0 +1,62 @@
+defaults:
+  - encoder: hf_bert
+  - ctx_sources: default_sources
+
+# A trained bi-encoder checkpoint file to initialize the model
+# A100 server
+model_file: /home/tjdgma/DPR/dpr/checkpoint_nq/hard2_batch8/dpr_biencoder.39.7360
+# 7 server
+#model_file: /home/mongjin/dpr_env/dpr/checkpoint_nq/hard1/dpr_biencoder.49
+
+# Name of the all-passages resource
+ctx_src: dpr_wiki_split_7
+
+# which (ctx or query) encoder to be used for embedding generation
+encoder_type: ctx
+
+# output .tsv file path to write results to
+# A100 server
+out_file: /home/tjdgma/DPR/dpr/checkpoint_nq/hard2_batch8/hard2_7
+# 7server
+#out_file: /home/mongjin/dpr_env/dpr/checkpoint_nq/hard1-49
+
+# Whether to lower case the input text. Set True for uncased models, False for the cased ones.
+do_lower_case: True
+
+# Number(0-based) of data shard to process
+# depend on num_shards => range(0,40) => [0,1,2,..,38,39] 0 3
+shard_id: 0
+
+# Total amount of data shards (6 = 350만, 8 = 262만, 9 = 233만, 10 = 210만 / momery ) 9
+#num_shards: 50 -> baseline 1
+num_shards: 1
+
+
+# Batch size for the passage encoder forward pass (works in DataParallel mode) 1200
+# 병렬 4개 = 512, 병렬 3개 = 800, 병렬 2개 = 1200 / GPU memory
+batch_size: 512
+
+tables_as_passages: False
+
+# tokens which won't be slit by tokenizer
+special_tokens:
+
+tables_chunk_sz: 100
+
+# TODO
+tables_split_type: type1
+
+
+# TODO: move to a conf group
+# local_rank for distributed training on gpus
+local_rank: -1
+device:
+distributed_world_size:
+distributed_port:
+no_cuda: False
+n_gpu: 1
+fp16: False
+
+# For fp16: Apex AMP optimization level selected in ['O0', 'O1', 'O2', and 'O3']."
+#        "See details at https://nvidia.github.io/apex/amp.html
+fp16_opt_level: O1

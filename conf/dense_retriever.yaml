@@ -1,0 +1,95 @@
+defaults:
+  - encoder: hf_bert # defines encoder initialization parameters
+  - datasets: retriever_default # contains a list of all possible sources of queries for evaluation. Specific set is selected by qa_dataset parameter
+  - ctx_sources: default_sources # contains a list of all possible passage sources. Specific passages sources selected by ctx_datatsets parameter
+
+indexers:
+  flat:
+    _target_: dpr.indexer.faiss_indexers.DenseFlatIndexer
+
+  hnsw:
+    _target_: dpr.indexer.faiss_indexers.DenseHNSWFlatIndexer
+
+  hnsw_sq:
+    _target_: dpr.indexer.faiss_indexers.DenseHNSWSQIndexer
+
+
+#shard_num : 2
+
+#shard_id : 0
+
+# the name of the queries dataset from the 'datasets' config group # nq_test, squad1_test, trivia_test
+qa_dataset: nq_train
+
+# a list of names of the passages datasets from the 'ctx_sources' config group
+# like domain 같은 다양한 passage들 넣어서 실험하고싶을때
+
+
+ctx_datatsets: [dpr_wiki_split_0,dpr_wiki_split_1,dpr_wiki_split_2,dpr_wiki_split_3,
+dpr_wiki_split_4,dpr_wiki_split_5,dpr_wiki_split_6,dpr_wiki_split_7]
+
+
+#Glob paths to encoded passages (from generate_dense_embeddings tool)
+
+encoded_ctx_files: ['/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_0_0','/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_1_0',
+'/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_2_0','/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_3_0',
+'/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_4_0','/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_5_0',
+'/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_6_0','/home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/hard1_7_0']
+
+out_file: /home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/real_train_39.json
+# "regex" or "string"
+match: string
+n_docs: 100
+validation_workers: 16
+
+
+# Batch size to generate query embeddings
+batch_size: 128
+
+# Whether to lower case the input text. Set True for uncased models, False for the cased ones.
+do_lower_case: True
+
+# The attribute name of encoder to use for queries. Options for the BiEncoder model: question_model, ctx_model
+# question_model is used if this param is empty
+encoder_path:
+
+# path to the FAISS index location - it is only needed if you want to serialize faiss index to files or read from them
+# (instead of using encoded_ctx_files)
+# it should point to either directory or a common index files prefix name
+# if there is no index at the specific location, the index will be created from encoded_ctx_files
+index_path:
+
+kilt_out_file:
+
+# A trained bi-encoder checkpoint file to initialize the model
+model_file: /home/tjdgma/DPR/dpr/checkpoint_nq/hard1_batch8/dpr_biencoder.39.7360
+
+validate_as_tables: False
+
+# RPC settings
+rpc_retriever_cfg_file:
+rpc_index_id:
+use_l2_conversion: False
+use_rpc_meta: False
+rpc_meta_compressed: False
+
+indexer: flat
+
+# tokens which won't be slit by tokenizer
+special_tokens:
+
+# TODO: move to a conf group
+# local_rank for distributed training on gpus
+local_rank: -1
+global_loss_buf_sz: 150000
+device:
+distributed_world_size:
+distributed_port:
+no_cuda: False
+n_gpu:
+fp16: False
+
+# For fp16: Apex AMP optimization level selected in ['O0', 'O1', 'O2', and 'O3']."
+#        "See details at https://nvidia.github.io/apex/amp.html
+fp16_opt_level: O1
+

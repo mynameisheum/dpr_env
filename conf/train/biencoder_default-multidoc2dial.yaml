@@ -1,0 +1,39 @@
+# @package _group_
+
+# remember epoch save [2,5,10,20,30,49] or [10,20,30,40,49,50]
+batch_size: 4
+dev_batch_size: 4
+adam_eps: 1e-8
+adam_betas: (0.9, 0.999)
+max_grad_norm: 2.0
+log_batch_step: 1
+train_rolling_loss_step: 20
+weight_decay: 0.0
+learning_rate: 2e-5
+
+# 200 or 1600
+# Linear warmup over warmup_steps.
+warmup_steps: 400
+
+# Number of updates steps to accumulate before performing a backward/update pass.
+gradient_accumulation_steps: 32
+
+# Total number of training epochs to perform.
+num_train_epochs: 50
+eval_per_epoch: 1
+hard_negatives: 0
+other_negatives: 3
+val_av_rank_hard_neg: 30
+val_av_rank_other_neg: 30
+val_av_rank_bsz: 128
+val_av_rank_max_qs: 10000
+
+# batch size : 4
+# accumulation : 32
+# hard negative 1, norm 2 or 0
+# max_length : 512
+# warm up rate 0.024  => batch 16: warm up 1600 , batch 8 : warm up : 3200
+# but when me, batch 16: warm up 200, batch8: warm up 400, batch 4 : warm up 80
+
+# hard negative = ground based bm25 on (both5-15)
+# other negative = query based bm25 on (both5-15) or update negative
